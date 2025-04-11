@@ -6,4 +6,13 @@ def scrape_website(website):
 
     chrome_driver_path = ""
     options = webdriver.ChromeOption()
-    driver = webdriver.Chrome(service=Service(chrome_driver_path))
+    driver = webdriver.Chrome(service=Service(chrome_driver_path), options=options)
+
+    try:
+        driver.get(website)
+        print("Page Loaded...")
+        html = driver.page_source
+
+        return html
+    finally:
+        driver.quit()
