@@ -20,6 +20,16 @@ def scrape_website(website):
         solve_res = driver.execute(
             "executeCdpCommand",
 
+            {
+                "cmd": "Captcha.waitForSolve",
+                "params": {"detectTimeout": 10000},
+            },
+        )
+        print("Captcha solve status:", solve_res["value"]["status"])
+        print("Navigated! Scraping page content...")
+        html = driver.page_source
+        return html
+
 
 import selenium.webdrver as webdriver
 from selenium.webdriver.chrome.service import Service
