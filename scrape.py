@@ -47,6 +47,15 @@ def clean_body_content(body_content):
         script_or_style.extract()
 
 
+ # Get text or further process the content
+    cleaned_content = soup.get_text(separator="\n")
+    cleaned_content = "\n".join(
+        line.strip() for line in cleaned_content.splitlines() if line.strip()
+    )
+
+    return cleaned_content
+
+
 import selenium.webdrver as webdriver
 from selenium.webdriver.chrome.service import Service
 import time
