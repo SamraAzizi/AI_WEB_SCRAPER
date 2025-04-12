@@ -10,6 +10,17 @@ load_dotenv()
 SBR_WEBDRIVER = os.getenv("SBR_WEBDRIVER")
 
 
+
+def scrape_website(website):
+    print("Connecting to Scraping Browser...")
+    sbr_connection = ChromiumRemoteConnection(SBR_WEBDRIVER, "goog", "chrome")
+    with Remote(sbr_connection, options=ChromeOptions()) as driver:
+        driver.get(website)
+        print("Waiting captcha to solve...")
+        solve_res = driver.execute(
+            "executeCdpCommand",
+
+
 import selenium.webdrver as webdriver
 from selenium.webdriver.chrome.service import Service
 import time
