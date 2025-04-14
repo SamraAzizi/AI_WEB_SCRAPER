@@ -67,4 +67,21 @@ Run The App
 streamlit run main.py
 ```
 
+##  How to Use
+
+1. Enter the URL of the website you want to scrape.
+2. Click "Scrape Site".
+3. Enter a custom description of the content you want parsed (e.g., "extract all job titles and company names").
+4. Click "Parse Content" to get the structured output using LLM.
+
+##  Example Parse Descriptions
+
+- "Extract all product names and prices"
+- "Get all article titles from this blog"
+- "List the job titles and company names"
+
+##  Environment Variables
+
+Create a `.env` file in the root directory:
+
 
