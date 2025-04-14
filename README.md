@@ -43,8 +43,28 @@ langchain_ollama
 
 ## Project stucture
 
+
 ├── main.py            # Streamlit interface
 ├── scrape.py          # Web scraping logic
 ├── parse.py           # LangChain + Ollama parsing logic
 ├── .env               # Contains your WebDriver endpoint
+├── chromedriver.exe    # ChromeDriver executable
 └── README.md
+
+
+## Setup
+
+Add you WebDriver URL in `.env`:
+
+```bash
+SBR_WEBDRIVER=https://your-sbr-webdriver-endpoint
+
+```
+
+Run The App
+```bash
+
+streamlit run main.py
+```
+
+
