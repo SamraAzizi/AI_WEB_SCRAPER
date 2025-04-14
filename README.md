@@ -85,3 +85,8 @@ streamlit run main.py
 Create a `.env` file in the root directory:
 
 
+```bash
+SBR_WEBDRIVER=https://your_scraping_browser_url
+```
+
+
