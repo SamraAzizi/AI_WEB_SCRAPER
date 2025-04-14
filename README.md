@@ -1,5 +1,5 @@
 
-# 🕷️ AI Web Scraper with Streamlit, Selenium & LLM Parsing
+#  AI Web Scraper with Streamlit, Selenium & LLM Parsing
 
 This project is an AI-powered web scraper that:
 
@@ -7,17 +7,17 @@ This project is an AI-powered web scraper that:
 - Extracts and cleans the DOM content.
 - Sends the cleaned content to an LLM (Llama2 via Ollama) for parsing based on user-defined instructions.
 
-## 📦 Features
+##  Features
 
-- 🌐 Scrapes any publicly accessible website
-- 🔒 Bypasses simple captchas using Scraping Browser's API
-- 🧹 Extracts and cleans body content with BeautifulSoup
-- 🤖 Parses content using LLM (Ollama + Llama2)
-- 🧠 Custom parsing based on user input
-- 🖼️ Streamlit web interface
+-  Scrapes any publicly accessible website
+-  Bypasses simple captchas using Scraping Browser's API
+-  Extracts and cleans body content with BeautifulSoup
+-  Parses content using LLM (Ollama + Llama2)
+-  Custom parsing based on user input
+-  Streamlit web interface
 
 
-## 🧰 Requirements
+##  Requirements
 
 Make sure you have the following installed:
 
@@ -31,3 +31,20 @@ Install required packages:
 ```bash
 pip install -r requirements.txt
 ```
+requirements.txt should include:
+
+
+streamlit
+selenium
+python-dotenv
+beautifulsoup4
+langchain
+langchain_ollama
+
+## Project stucture
+
+├── main.py            # Streamlit interface
+├── scrape.py          # Web scraping logic
+├── parse.py           # LangChain + Ollama parsing logic
+├── .env               # Contains your WebDriver endpoint
+└── README.md
